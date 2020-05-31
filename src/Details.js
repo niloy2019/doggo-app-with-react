@@ -11,11 +11,12 @@ const Details = (props) => {
 
     const [image,setImage] =  useState("");
     const [loggedIn,setLoggedIn] = useState("");
+    const [change,setChange] = useState("");
 
     useEffect(() => {
        getBreedImage();
        setLoggedIn(true);
-    }, []); 
+    }, [change]); 
 
     const getBreedImage= async () => {
 
@@ -27,7 +28,8 @@ const Details = (props) => {
     }   
 
     function refreshPage() {
-        window.location.reload(false);
+        setChange(Math.random())
+        console.log("change : "+change)
       }
 
     const  logout = () => {
@@ -52,7 +54,7 @@ const Details = (props) => {
                 <table >
                     <tr>
                         <td>
-                            <button type="submit" onClick={refreshPage} className={style.btn} >Home</button>
+                            {/* <button type="submit" onClick={refreshPage} className={style.btn} >Home</button> */}
                             <button type="submit" onClick={refreshPage} className={style.btn2} >Change</button>
                             <button className={style.btn}>
                                 <Link to="/" onClick={logout} className={style.li} >Log out</Link>
