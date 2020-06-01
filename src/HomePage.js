@@ -51,11 +51,13 @@ class HomePage extends Component {
      }
      
     return (
-      <div className="dogDetails">
+      <div className={style.dogDetails}>
 
               <br/> 
               <div className={style.div}>
                  <button onClick={this.logout} className={style.btn} >Log out</button>
+                 <br/>
+                 <h1>List of Dog Breeds</h1>
               </div>
                     
               {/* <div className={style.recipe}  >

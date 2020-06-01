@@ -38,7 +38,7 @@ const App = () => {
 
        
   return (
-    <Router>
+    <Router  >
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/signup" exact component={Signup} />
