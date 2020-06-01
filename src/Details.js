@@ -19,7 +19,6 @@ const Details = (props) => {
     }, [change]); 
 
     const getBreedImage= async () => {
-
         const response = await fetch (`https://dog.ceo/api/breed/${breedName}/images/random`)
         const data = await response.json();
         console.log(typeof data.message)
