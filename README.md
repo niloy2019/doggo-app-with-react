@@ -1,4 +1,7 @@
-## Desktop App: 
+#Doggo App 
+
+
+## Desktop View: 
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop1.PNG)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop2.PNG)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop3.PNG)
@@ -6,7 +9,7 @@
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop5.PNG)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop6.PNG)
 
-## Mobile App:
+## Mobile View:
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob1.jpg)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob2.jpg)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob3.jpg)
