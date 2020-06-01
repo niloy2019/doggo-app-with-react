@@ -39,10 +39,6 @@ const Details = (props) => {
         setLoggedIn(false)
     }
 
-    // if (!loggedIn) {
-        // return <Redirect to="/home" />
-    // }    
-
     return(
         <div className={style.recipe2}  >
             

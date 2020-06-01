@@ -7,9 +7,16 @@
     justify-content: space-around;
     background: blanchedalmond;
     color: darkslategray;
-    /* align-items: center; */
+    align-items: center;
     min-width: 40%;
+    padding: 20px;
 
+}
+
+.recipes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .t{
@@ -32,8 +39,8 @@
 
 .image{
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 40vh;
+    height: 40vh;
 }
 
 .image2{

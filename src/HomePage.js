@@ -58,29 +58,30 @@ class HomePage extends Component {
                  <button onClick={this.logout} className={style.btn} >Log out</button>
               </div>
                     
-              <div className={style.recipe}  >
+              {/* <div className={style.recipe}  >
                     <table className={style.t} >
                         <tr>
                             <td className={style.td}> <h4>Breed Name</h4>   </td> 
                             <td className={style.td}> <h4>Image</h4></td>
                         </tr>
                     </table> 
-                </div>
-            
-              {this.state.breeds.map(breed => (
-                  <Link to={{
-                              pathname:'/details',
-                              state:{
-                                  breedName: breed
-                                  //  image :image    
-                              } 
-                            }} 
-                          activeClassName="active" 
-                          className={style.link }
-                   >
-                      <DogDetails breedName={breed} className={style.dogDetails} />   
-                  </Link>
-              ))}
+                </div> */}
+
+              <div className={style.recipes}>
+                    {this.state.breeds.map(breed => (
+                        <Link to={{
+                                    pathname:'/details',
+                                    state:{
+                                        breedName: breed 
+                                    } 
+                                  }} 
+                                activeClassName="active" 
+                                className={style.link }
+                        >
+                            <DogDetails breedName={breed}  />   
+                        </Link>
+                    ))}
+              </div>
       </div>
   
     )

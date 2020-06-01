@@ -30,8 +30,13 @@ const DogDetails = ( {breedName}) => {
     return(
        
          <Router>
+
+            <div className={style.recipe} onClick={details} >
+                    <h3>{breedName}</h3>
+                    <img src={image} className={style.image} />               
+            </div>
            
-                <div className={style.recipe} onClick={details} >
+                {/* <div className={style.recipe} onClick={details} >
                     <table>
                         <tr>
                             <td></td>
@@ -41,7 +46,7 @@ const DogDetails = ( {breedName}) => {
                     </table>
                    
                     
-                </div>
+                </div> */}
             
          </Router>   
     )
