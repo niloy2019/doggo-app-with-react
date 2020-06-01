@@ -10,7 +10,6 @@ const DogDetails = ( {breedName}) => {
 
     const [image,setImage] =  useState("");
     
-
     useEffect(() => {
        getBreedImage();
     }, []); 
@@ -23,31 +22,12 @@ const DogDetails = ( {breedName}) => {
         setImage(x)
     }   
 
-    const details = () => {
-        
-    }
-
     return(
-       
          <Router>
-
-            <div className={style.recipe} onClick={details} >
+            <div className={style.recipe}  >
                     <h3>{breedName}</h3>
                     <img src={image} className={style.image} />               
             </div>
-           
-                {/* <div className={style.recipe} onClick={details} >
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td className={style.td}> <h3>{breedName}</h3>   </td> 
-                            <td className={style.td}>  <img src={image} className={style.image} /></td>
-                        </tr>
-                    </table>
-                   
-                    
-                </div> */}
-            
          </Router>   
     )
 } 

@@ -5,7 +5,6 @@ import  axios from 'axios'
 import DogDetails from './DogDetails'
 import Details from './Details'
 import style from './DogDetails.module.css'
-import Logout from './Logout';
 
 
 
@@ -59,15 +58,6 @@ class HomePage extends Component {
                  <br/>
                  <h1>List of Dog Breeds</h1>
               </div>
-                    
-              {/* <div className={style.recipe}  >
-                    <table className={style.t} >
-                        <tr>
-                            <td className={style.td}> <h4>Breed Name</h4>   </td> 
-                            <td className={style.td}> <h4>Image</h4></td>
-                        </tr>
-                    </table> 
-                </div> */}
 
               <div className={style.recipes}>
                     {this.state.breeds.map(breed => (
@@ -91,94 +81,4 @@ class HomePage extends Component {
 }
 
 export default HomePage
-
-
-// const HomePage = () => {
-
-//   const [breeds,setBreeds] = useState([]);
-//   // const token = localStorage.getItem("token");
-//   const[loggedIn,setLoggedIn] = useState([]);
-
-//   useEffect(() => {
-//     getBreeds();
-//     setLoggedIn(true)
-//     if(localStorage.getItem("token")==null){
-//       return <Redirect to="/" />
-//       window.location.reload(false);
-//     }
-//     // check();
-//   }, []); 
-
-//   // const check = () => {
-      
-//   //   if(token==null){
-//   //       setLoggedIn(true)   
-//   //   }
-    
-//   // }
-
-//   const getBreeds = async (e) => {
-    
-//     //   e.preventDefault();
-//       const response = await fetch (`https://dog.ceo/api/breeds/list/all`)
-//       const data = await response.json();
-//       let x=data.message
-//       let m=[]
-//       for (var b in x) {
-//         if (x.hasOwnProperty(b)) {
-//           m.push(b);
-//         }
-//       }
-//       setBreeds(m)
-//       console.log(breeds)
-//   }
-
-//   const logout = () => {
-//     localStorage.removeItem("token")
-//     // console.log(token)
-//     console.log("snd")
-//   }
-
-  
-       
-//   return (
-//     <div className="dogDetails">
-                    
-//     <button onClick={logout} >Log out</button>
-//     <Link to="/logout">Logout</Link>
-
-//             {breeds.map(breed => (
-//                 <Link to={{
-//                             pathname:'/details',
-//                             state:{
-//                                 breedName: breed
-//                                 //  image :image    
-//                             } 
-//                           }} 
-//                         activeClassName="active" 
-//                         className={style.link }
-//                  >
-//                     <DogDetails breedName={breed} className={style.dogDetails} />   
-//               </Link>
-//     ))}
-// </div>
-
-//     // <Router>
-//     //     <Route path="/home" exact render={
-//     //       () => {
-//     //         return(
-                  
-            
-//     //         )
-//     //       }
-//     //     } />
-        
-        
-        
-//     //  </Router>
-//       );
-//   }
-
-
-// export default HomePage;
 
