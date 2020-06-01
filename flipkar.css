@@ -1,0 +1,210 @@
+
+
+/***************************************************    for the header    **********************************************************/
+
+/*****************  for search box  *****************/
+
+.input{
+    width: 510px;
+    height: 37px;
+    margin-left: 10px;
+    /* border-right: 0px; */
+
+}
+
+/*****************  for login button  *****************/
+
+.login{
+    padding-left: 42 px;  
+    background-color: white;
+    width: 120px;
+    height: 35px;  
+    color: rgb(40, 116, 240);
+    font-weight: bold  ;
+    border: 0px;
+}
+
+.loginPadding{
+    padding-left: 44px;
+}
+
+/*****************  for search button  *****************/
+
+.search{
+    border: 0px;
+    cursor: pointer;
+}
+
+/*****************  for more button   *****************/
+
+.morePadding{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+/*****************  for cart button  *****************/
+
+.cartPadding{
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+/*****************   for last td    *****************/
+
+.last{
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+/***************************************************    for the Navbar    **********************************************************/
+
+.td{
+    text-align: center;
+    font-weight: 550;
+    font-size: 13px;
+    padding-top: 3px;
+}
+
+
+
+
+
+
+/***************************************************    for the Footer    **********************************************************/
+
+.fa fa-star checked{
+    color: orange;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    min-height: 60px;
+    
+}
+.a{
+    background-size: cover;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+.b{
+  float: right;
+    padding: -100px;
+}
+
+.showDetails{
+    background-color: blue;
+    color: white;
+    height: 30px;
+    width: 150px;
+}
+
+.mySlides{
+    display: none;
+}
+table,th,td{
+    border: none;
+}
+
+
+
+.footer{
+    color: white;
+}
+
+.m{
+    color: white;
+    font-family:sans-serif;
+    font-size: 12px;
+    list-style-type: none;
+    padding: 2px;
+    
+}
+.h{
+    color: white;
+    font-family:sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.h:hover{
+	color:white;
+    text-decoration: underline;
+}
+
+
+
+body{
+    margin: 0px;
+}
+/*
+li{
+    padding: 2px;
+}
+*/
+.footer{
+    background-color: #172337;
+    padding-top: 30px;
+}
+
+
+.d{
+      color: black;
+    font-family:sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+   
+}
+.d:hover{
+    text-decoration: underline;
+}
+
+.t{
+    font-family: sans-serif;
+}
+
+.header{
+    color: white;
+    font-family:sans-serif;
+    text-decoration: none; 
+}
+
+.footerHead{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
