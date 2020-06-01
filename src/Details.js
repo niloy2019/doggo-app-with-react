@@ -50,6 +50,9 @@ const Details = (props) => {
                     <tr>
                         <td>
                             {/* <button type="submit" onClick={refreshPage} className={style.btn} >Home</button> */}
+                            <button className={style.btn}>
+                                <Link to="/home" className={style.li} >Home</Link>
+                            </button>
                             <button type="submit" onClick={refreshPage} className={style.btn2} >Change</button>
                             <button className={style.btn}>
                                 <Link to="/" onClick={logout} className={style.li} >Log out</Link>
