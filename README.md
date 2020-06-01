@@ -29,7 +29,7 @@
                    
                    Thats all aboout this App . Hosting link and the sample image of the App is given below.
                
-    ## Hosting Link : 
+## Hosting Link : 
             https://doggo-app-with-react.herokuapp.com/
 
 ## Desktop View: 
