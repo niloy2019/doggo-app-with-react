@@ -1,5 +1,8 @@
 # Doggo App 
 
+## Technology used :
+           React 
+
 ## Description : 
     This is a simple React app with email & password login/register after which the web
     app shows the list of all the breeds from the dog.ceo API and also a detail page
@@ -8,6 +11,7 @@
     The web app is robust enough so that if the user (logged in) exits the
     browser and opens it again he should be automatically logged in without asking for
     his/her email/password.This Application is responsive for desktop as well as Mobile view.
+    All the details of the Explained below.
     
      
      --> First User have to Sugn up with thie credential in this Application .His information will be stored 
