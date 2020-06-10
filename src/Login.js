@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {Redirect, Link} from 'react-router-dom'
 import './login.css'
+import { GoogleLogin } from 'react-google-login';
+import FontAwesome from 'react-fontawesome'
 
 export class Login extends Component {
 
@@ -15,7 +17,9 @@ export class Login extends Component {
         this.state = {
              username :'',
              password : '',
-             loggedIn
+             loggedIn,
+             name:'',
+             imageUrl:''
         }
 
         this.onChange=this.onChange.bind(this)
@@ -38,28 +42,55 @@ export class Login extends Component {
                 loggedIn : true
             })
         }
-
-        // if(username==="A" && password==="B"){
-           
-        // }
     }
 
+    responseGoogle = (response) => {
+        console.log("LoggedIn")
+        console.log(response)
+        localStorage.setItem("token","google")
+        this.setState({
+             loggedIn:true,
+             name : response.profileObj.givenName,
+             imageUrl:response.profileObj.imageUrl
+        })
+        console.log("Google Account Details")
+        console.log(this.state.name)
+        console.log(this.state.imageUrl)
+      }
+
     render() {
+        if(localStorage.getItem("token")==="google"){
+            return <Redirect  to={{
+                                    pathname:'/home',
+                                    state:{
+                                        name:this.state.name,
+                                        imageUrl:this.state.imageUrl
+                                    } 
+                                  }}  
+                   />
+        }
 
         if(this.state.loggedIn){
-            return <Redirect to="/home" />
+            return <Redirect  to={{
+                                    pathname:'/home',
+                                    state:{
+                                        name:this.state.username,
+                                        imageUrl:''
+                                    } 
+                                }}  
+                    />
         }
 
         return (
             <div>
-                <img className="wave" src={require('./img/wave.png')} />
+                <img className="wave" src={require('./img/wave.png')} alt="wave.png" />
                 <div className="container">
                     <div className="img">
-                        <img src={require('./img/bg.svg')} />
+                        <img src={require('./img/bg.svg')} alt="bg.svg" />
                     </div>
                     <div className="login-content">
                         <form onSubmit={this.submitForm}>
-                            <img src={require('./img/avatar.svg')} />
+                            <img src={require('./img/avatar.svg')} alt="avatar.svg" />
                             <h2 className="title">Welcome</h2>
                             <div className="input-div one">
                                  <div className="i">
@@ -82,6 +113,16 @@ export class Login extends Component {
                             <Link to="/signup" >Don't Have an Account?</Link>
                             {/* <a href="#" ></a> */}
                             <input type="submit" className="btn" value="Login" />
+                            <GoogleLogin 
+                                    clientId="443492183069-1ktqu6q8fcqcfocohvdlgnic9urgo5eh.apps.googleusercontent.com"
+                                    onSuccess={this.responseGoogle}
+                                    cookiePolicy={'single_host_origin'}     
+                                    isSignedIn={true}
+                                    className="n"
+                                >
+                                    <FontAwesome name='google'/>
+                                    <span> Login with Google</span>
+                            </GoogleLogin>
                         </form>
                     </div>
                 </div>

@@ -1,10 +1,9 @@
-import React,{useEffect,useState, Component} from 'react';
-import { BrowserRouter as Router, Route,Link, Switch, Redirect} from "react-router-dom";
+import React,{ Component} from 'react';
+import { Link, Redirect} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import  axios from 'axios'
 import DogDetails from './DogDetails'
-import Details from './Details'
 import style from './DogDetails.module.css'
+import { GoogleLogout } from 'react-google-login';
 
 
 
@@ -19,6 +18,7 @@ class HomePage extends Component {
     this.getBreeds=this.getBreeds.bind(this)
     this.logout=this.logout.bind(this)
     this.getBreeds()
+    
   }
 
    getBreeds = async () => {
@@ -48,15 +48,39 @@ class HomePage extends Component {
     if(localStorage.getItem("token")==null){
             return <Redirect to="/" />
      }
+
+     let button,image
+
+     if(localStorage.getItem("token")==="google"){
+          button= <GoogleLogout
+                      clientId="443492183069-1ktqu6q8fcqcfocohvdlgnic9urgo5eh.apps.googleusercontent.com"
+                      buttonText="Logout"
+                      onLogoutSuccess={this.logout}
+                  >
+                  </GoogleLogout>
+                  console.log(this.props.location.state.name)
+                  console.log(this.props.location.state.imageUrl)
+         image = <img src={this.props.location.state.imageUrl} className={style.image3} alt={this.props.location.state.imageUrl} />          
+     }else{
+       button= <button onClick={this.logout} className={style.btn} >Log out</button>
+
+     }
      
     return (
       <div className={style.dogDetails}>
 
-              <br/> 
               <div className={style.div}>
-                 <button onClick={this.logout} className={style.btn} >Log out</button>
-                 <br/>
+                  <br/>
+                 {button}
+                 <br/><br/>
                  <h1>List of Dog Breeds</h1>
+              </div>
+              
+              <div className={style.topcorner} >
+                    <div className={style.recipe3}  >
+                        <h4 className={style.tx} >{this.props.location.state.name}</h4>
+                        {image}
+                    </div>
               </div>
 
               <div className={style.recipes}>
@@ -64,7 +88,9 @@ class HomePage extends Component {
                         <Link to={{
                                     pathname:'/details',
                                     state:{
-                                        breedName: breed 
+                                        breedName: breed ,
+                                        name:this.props.location.state.name,
+                                        imageUrl:this.props.location.state.imageUrl
                                     } 
                                   }} 
                                 activeClassName="active" 

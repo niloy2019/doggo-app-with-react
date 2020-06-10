@@ -1,12 +1,8 @@
-import React,{useEffect,useState, Component} from 'react';
-import logo from './logo.svg';
-import { BrowserRouter as Router, Route,Link, Switch} from "react-router-dom";
+import React,{useEffect,useState} from 'react';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import  axios from 'axios'
-import DogDetails from './DogDetails'
 import Details from './Details'
-import style from './DogDetails.module.css'
 import Login from './Login'
 import Signup from './Signup';
 import HomePage from './HomePage';

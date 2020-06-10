@@ -47,14 +47,14 @@ export class Signup extends Component {
         return (
            
             <div>
-                <img className="wave" src={require('./img/wave.png')} />
+                <img className="wave" src={require('./img/wave.png')} alt="wave.png" />
                 <div className="container">
                     <div className="img">
-                        <img src={require('./img/bg.svg')} />
+                        <img src={require('./img/bg.svg')} alt="bg.svg" />
                     </div>
                     <div className="login-content">
                         <form onSubmit={this.submitForm}>
-                            <img src={require('./img/avatar.svg')} />
+                            <img src={require('./img/avatar.svg')} alt="avatar.svg" />
                             <h2 className="title">Let's Start</h2>
                             <div className="input-div one">
                                  <div className="i">

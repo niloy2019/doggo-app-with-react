@@ -1,11 +1,21 @@
-import React, { useEffect,useState,Component } from 'react';
+import React, { useEffect,useState } from 'react';
 import style from './DogDetails.module.css'
-import { BrowserRouter as Router, Route,Link,Redirect} from "react-router-dom";
+import { Link,Redirect} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { GoogleLogout } from 'react-google-login';
+
+//create your forceUpdate hook
+function useForceUpdate(){
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue(value => ++value); // update the state to force render
+}
 
 const Details = (props) => {
     
     console.log("Details Page"+props)
+
+    // use your hook her
+    const forceUpdate = useForceUpdate();
     
     const [image,setImage] =  useState("");
     const [change,setChange] = useState("");
@@ -17,6 +27,7 @@ const Details = (props) => {
             console.log("Breed Name Done")
             getBreedImage();
             console.log("Image Done")
+            console.log(props)
     }
     }, [change]); 
 
@@ -32,6 +43,7 @@ const Details = (props) => {
 
     const  logout = () => {
         localStorage.removeItem("token")
+        forceUpdate()
     } 
 
     if(localStorage.getItem("token")==null){
@@ -39,12 +51,29 @@ const Details = (props) => {
      }else if(props.location.state==null){
          return <Redirect to="/home" />
      }
+
      else{
+
+        let button
+
+        if(localStorage.getItem("token")==="google"){
+             button= <GoogleLogout
+                         clientId="443492183069-1ktqu6q8fcqcfocohvdlgnic9urgo5eh.apps.googleusercontent.com"
+                         buttonText="Logout"
+                         onLogoutSuccess={logout}
+                     >
+                          <Link to="/" onClick={logout} className={style.li2} >Log out</Link>
+                     </GoogleLogout>
+        }else{
+          button=  <button className={style.btn} onClick={logout} >
+                      <Link to="/" onClick={logout} className={style.li} >Log out</Link>    
+                   </button>
+        }
         return(
             <div className={style.recipe2}  >
                 
                 <h3> Name : {breedName}</h3>
-                <img src={image} className={style.image2} />
+                <img src={image} className={style.image2} alt={image} />
     
                 <div className={style.change} >
                     <table >
@@ -52,12 +81,19 @@ const Details = (props) => {
                             <td>
                                 {/* <button type="submit" onClick={refreshPage} className={style.btn} >Home</button> */}
                                 <button className={style.btn}>
-                                    <Link to="/home" className={style.li} >Home</Link>
+                                    <Link  className={style.li} to={{
+                                                                        pathname:'/home',
+                                                                        state:{
+                                                                            name:props.location.state.name,
+                                                                            imageUrl:props.location.state.imageUrl
+                                                                        } 
+                                                                    }} 
+                                     >
+                                       Home
+                                    </Link>
                                 </button>
                                 <button type="submit" onClick={refreshPage} className={style.btn2} >Change</button>
-                                <button className={style.btn}>
-                                    <Link to="/" onClick={logout} className={style.li} >Log out</Link>
-                                </button>
+                                {button}
                             </td>
                         </tr>
                     </table>
