@@ -61,8 +61,9 @@ const Details = (props) => {
                          clientId="443492183069-1ktqu6q8fcqcfocohvdlgnic9urgo5eh.apps.googleusercontent.com"
                          buttonText="Logout"
                          onLogoutSuccess={logout}
+                         className={style.n}
                      >
-                          <Link to="/" onClick={logout} className={style.li2} >Log out</Link>
+                          
                      </GoogleLogout>
         }else{
           button=  <button className={style.btn} onClick={logout} >
