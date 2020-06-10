@@ -58,6 +58,11 @@ export class Login extends Component {
         console.log(this.state.imageUrl)
       }
 
+      onFailure = (response) => {
+          console.log("failed")
+          console.log(response)
+      }
+
     render() {
         if(localStorage.getItem("token")==="google"){
             return <Redirect  to={{
@@ -116,6 +121,7 @@ export class Login extends Component {
                             <GoogleLogin 
                                     clientId="443492183069-1ktqu6q8fcqcfocohvdlgnic9urgo5eh.apps.googleusercontent.com"
                                     onSuccess={this.responseGoogle}
+                                    onFailure={this.onFailure}
                                     cookiePolicy={'single_host_origin'}     
                                     isSignedIn={true}
                                     className="n"
