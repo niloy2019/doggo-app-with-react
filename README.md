@@ -1,25 +1,34 @@
-# Doggo App 
-           This is a React app with email & password login/register/Google Login after which
-    the web app shows the list of all the breeds from the dog.ceo API and also a detail page
-    which shows a random image for the picked dog (from the list). Also, shows a
-    logout button.
-    The web app is robust enough so that if the user (logged in) exits the
-    browser and opens it again he should be automatically logged in without asking for
-    his/her email/password.This Application is responsive for desktop as well as Mobile view.
-    All the details of the Explained below.
-    
+# Doggo App
+
+## Application Name : 
+  Doggo-App
+
+## Objective : 
+  To Make an Applicaton where user can different kinds of Breeds of Dogs. 
+
 ## Technology used :
            React
-           
+## Description :
+   This is a React app with email & password login/register/Google Login after which
+the web app shows the list of all the breeds from the dog.ceo API and also a detail page
+which shows a random image for the picked dog (from the list). Also, shows a
+logout button.
+    The web app is robust enough so that if the user (logged in) exits the
+browser and opens it again he should be automatically logged in without asking for
+his/her email/password.This Application is responsive for desktop as well as Mobile view.
+ All the details of the Explained below.
+               
 ## Key Features : 
        
-       1. Sign up and Login has been done using Local Storage .0
-       2. Google Login has been used to let the user login using their Google Account.(oauth2.0)
-       3. User's Login session has been maitain using token based login system .
-       4. The App is fully responsive for any kind of Device .
-       5. Hosted on Heroku  : https://doggo-app-with-react.herokuapp.com/details
+*  Sign up and Login has been done using Local Storage .
+*  Google Login has been used to let the user login using their Google Account.(oauth2.0)
+*  User's Login session has been maitain using token based login system .
+*  The App is fully responsive for any kind of Device .
 
-## Description : 
+## Hosting Link : 
+            https://doggo-app-with-react.herokuapp.com/       
+
+## Explanation : 
      
       --> First User have to Sign up with thie credential in this Application .His information will be stored 
           in the localstorage.
@@ -45,8 +54,6 @@
                    
                    Thats all aboout this App . Hosting link and the sample image of the App is given below.
                
-## Hosting Link : 
-            https://doggo-app-with-react.herokuapp.com/
 
 ## Desktop View: 
 
