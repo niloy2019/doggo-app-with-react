@@ -10,7 +10,7 @@
   To Make an Applicaton where user can different kinds of Breeds of Dogs. 
 
 ## Technology used :
-           React
+   React
 ## Description :
    This is a React app with email & password login/register/Google Login after which
 the web app shows the list of all the breeds from the dog.ceo API and also a detail page
@@ -29,7 +29,7 @@ his/her email/password.This Application is responsive for desktop as well as Mob
 *  The App is fully responsive for any kind of Device .
 
 ## Hosting Link : 
-            https://doggo-app-with-react.herokuapp.com/       
+   https://doggo-app-with-react.herokuapp.com/       
 
 ## Explanation : 
      
@@ -58,33 +58,39 @@ his/her email/password.This Application is responsive for desktop as well as Mob
                    Thats all aboout this App . Hosting link and the sample image of the App is given below.
                
 
+
+
+# Images of Project
+
 ## Desktop View: 
 
-## Signup Page :
+## 1.Signup Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop1.PNG)
 
-## Login Page :
+## 2.Login Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop2.PNG)
 
-## Home Page :
+## 3.Home Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop3.PNG)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop4.PNG)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop5.PNG)
 
-## Detail page(This Page will generate random image of the selected breed)
+## 4.Detail page(This Page will generate random image of the selected breed)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/desktop6.PNG)
 
-## Signup Page :
+
+## Mobile View
+## 1.Signup Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob1.jpg)
-## Login Page :
+## 2.Login Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob2.jpg)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob3.jpg)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob4.jpg)
 
-## Home Page :
+## 3.Home Page :
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob5.jpg)
 
-## Detail page(This Page will generate random image of the selected breed)
+## 4.Detail page(This Page will generate random image of the selected breed)
 ![](https://github.com/niloy2019/doggo-app-with-react/blob/master/Sample%20Image%20of%20Project/mob6.jpg)
 
 
