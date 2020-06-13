@@ -1,5 +1,8 @@
 # Doggo App
 
+## Author Name : 
+   Niloy Chakraborty
+
 ## Application Name : 
   Doggo-App
 
